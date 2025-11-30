@@ -6,58 +6,76 @@
 <title>Convite – Formatura</title>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap');
 
     body {
         margin: 0;
-        padding: 30px 15px;
-        background: #ffffff;
-        font-family: "Inter", sans-serif;
-        color: #1e2a45;
+        padding: 20px;
+        background: #e7ebf2;
         display: flex;
         justify-content: center;
+        font-family: "Inter", sans-serif;
     }
 
-    /* CONTAINER COM BORDAS PREMIUM */
-    .container {
+    /* TEXTURA + BORDA DUPLA */
+    .paper {
         width: 100%;
-        max-width: 900px;
-        border: 2px solid #234a84;      /* azul profundo premium */
-        border-radius: 18px;
+        max-width: 960px;
+        background: #ffffff url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+        border: 3px double #234a84;
+        border-radius: 14px;
         padding: 30px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
         box-sizing: border-box;
     }
 
-    /* LAYOUT LADO A LADO — RESPONSIVO */
-    .flex {
+    /* GRID LADO A LADO */
+    .grid {
         display: flex;
-        gap: 35px;
-        align-items: center;
         flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
     }
 
-    .foto {
-        flex: 1 1 300px;
-        max-width: 350px;
+    .foto-wrap {
+        flex: 1 1 320px;
     }
 
-    .foto img {
+    .foto-wrap img {
         width: 100%;
         border-radius: 16px;
-        border: 4px solid #e7ecf3;
-        box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+        border: 4px solid #e3e7ee;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        display: block;
+        position: relative;
+        z-index: 3; /* GARANTE QUE A FOTO FICA POR CIMA */
     }
 
-    .texto {
-        flex: 1 1 300px;
+    /* DIAGONAL — agora atrás da foto e texto */
+    .diagonal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120%;
+        height: 100%;
+        background: linear-gradient(145deg, #ffffff 0%, #f6f7f9 100%);
+        clip-path: polygon(0 0, 55% 0, 100% 100%, 0 100%);
+        z-index: 1; /* atrás de tudo */
+        pointer-events: none;
     }
 
-    /* TITULOS PREMIUM */
+    .content {
+        flex: 1 1 320px;
+        z-index: 2;
+        position: relative;
+    }
+
+    /* TIPOGRAFIA PREMIUM */
     .honra {
         font-size: 14px;
-        color: #6b7c93;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
+        color: #6b7c93;
         margin-bottom: 12px;
     }
 
@@ -65,79 +83,86 @@
         font-family: "Playfair Display", serif;
         font-size: 34px;
         font-weight: 600;
+        color: #1e2a45;
         line-height: 40px;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
     }
 
     .familia {
-        font-size: 15px;
+        font-size: 14px;
         color: #6b7c93;
         text-transform: uppercase;
-        line-height: 22px;
         letter-spacing: 1px;
-        margin-bottom: 28px;
+        margin-bottom: 25px;
     }
 
     .curso {
-        font-size: 26px;
+        font-size: 28px;
         font-weight: 700;
         color: #234a84;
         text-transform: uppercase;
         line-height: 32px;
-        margin-bottom: 32px;
-    }
-
-    .divider {
-        width: 110px;
-        height: 3px;
-        background: #234a84;
-        border-radius: 2px;
-        margin-bottom: 32px;
-    }
-
-    /* EVENTOS */
-    .evento {
         margin-bottom: 30px;
     }
 
+    .divider {
+        width: 100px;
+        height: 3px;
+        background: #234a84;
+        margin-bottom: 28px;
+    }
+
+    .evento {
+        margin-bottom: 25px;
+    }
+
     .evento h3 {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 600;
         color: #234a84;
         text-transform: uppercase;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
 
     .evento p {
-        margin: 3px 0;
+        margin: 2px 0;
         font-size: 15px;
         color: #4b5565;
     }
 
     .rodape {
+        margin-top: 25px;
         font-size: 22px;
-        color: #234a84;
         font-weight: 700;
-        text-transform: uppercase;
-        margin-top: 20px;
+        color: #1e2a45;
+        letter-spacing: 1px;
     }
 
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+        .diagonal {
+            display: none;
+        }
+    }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="paper">
 
-    <div class="flex">
+    <!-- DIAGONAL PREMIUM (fica atrás de tudo) -->
+    <div class="diagonal"></div>
 
-        <!-- FOTO DO LADO ESQUERDO -->
-        <div class="foto">
-            <img src="img/DSC05973.jpg">
+    <div class="grid">
+
+        <!-- FOTO -->
+        <div class="foto-wrap">
+            <img src="img/DSC05973.jpg" alt="Foto">
         </div>
 
-        <!-- TEXTO DO LADO DIREITO -->
-        <div class="texto">
+        <!-- TEXTO -->
+        <div class="content">
 
             <div class="honra">Com grande honra e alegria</div>
 
@@ -158,7 +183,6 @@
 
             <div class="divider"></div>
 
-            <!-- EVENTO 1 -->
             <div class="evento">
                 <h3>Cerimônia de Agradecimento</h3>
                 <p>13/01/2026 – 19h</p>
@@ -166,7 +190,6 @@
                 <p>Av. Maurício Cardoso, 62 – Centro – Erechim</p>
             </div>
 
-            <!-- EVENTO 2 -->
             <div class="evento">
                 <h3>Colação</h3>
                 <p>17/01/2026 – 19h</p>
@@ -174,7 +197,6 @@
                 <p>Salão de Eventos Prédio 5</p>
             </div>
 
-            <!-- EVENTO 3 -->
             <div class="evento">
                 <h3>Jantar / Baile</h3>
                 <p>17/01/2026 – 21h</p>
@@ -183,11 +205,9 @@
             </div>
 
             <div class="rodape">URI</div>
-
         </div>
 
     </div>
-
 </div>
 
 </body>
