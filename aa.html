@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite – Formatura</title>
+
+    <style>
+        /* FONTES */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #e7ebf2;
+            display: flex;
+            justify-content: center;
+            font-family: "Inter", sans-serif;
+        }
+
+        .paper {
+            width: 100%;
+            max-width: 960px;
+            background: #ffffff url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            border: 3px double #234a84;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diagonal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(145deg, #ffffff 0%, #f6f7f9 100%);
+            clip-path: polygon(0 0, 55% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .foto-wrap {
+            flex: 1 1 320px;
+        }
+
+        .foto-wrap img {
+            width: 100%;
+            border-radius: 16px;
+            border: 4px solid #e3e7ee;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .honra {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6b7c93;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .nome-script {
+            font-family: "Birthstone", cursive;
+            font-size: 66px;
+            line-height: 72px;
+            text-align: center;
+            color: #234A84;
+            margin: 10px 0 25px;
+        }
+
+        .familia {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6b7c93;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .curso {
+            font-family: "Oswald", sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .divider {
+            width: 100px;
+            height: 3px;
+            background: #234a84;
+            margin: 0 auto 32px;
+        }
+
+        /* EVENTOS REESTRUTURADOS */
+        .evento-flex {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .evento-titulo {
+            font-family: "Oswald", sans-serif;
+            font-size: 22px;
+            color: #234a84;
+            text-transform: uppercase;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .evento-data {
+            font-size: 16px;
+            font-weight: 600;
+            color: #234a84;
+            white-space: nowrap;
+        }
+
+        .evento-detalhes {
+            margin: 0 0 25px 0;
+            font-size: 15px;
+            color: #4b5565;
+            text-align: left;
+            line-height: 20px;
+        }
+
+        /* RODAPÉ COM LOGO */
+        .rodape {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .rodape img {
+            width: 90px;
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+
+            .diagonal {
+                display: none;
+            }
+
+            .grid {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .foto-wrap img {
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .nome-script {
+                font-size: 48px;
+                line-height: 52px;
+            }
+
+            .evento-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .evento-detalhes {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="paper">
+
+    <div class="diagonal"></div>
+
+    <div class="grid">
+
+        <!-- FOTO -->
+        <div class="foto-wrap">
+            <img src="img/DSC05973.jpg" alt="Foto da formatura">
+        </div>
+
+        <!-- TEXTO -->
+        <div style="flex: 1 1 320px;">
+
+            <div class="honra">COM GRANDE HONRA E ALEGRIA</div>
+
+            <div class="nome-script">Felipe Rodrigues de Almeida Julhão</div>
+
+            <div class="familia">
+                JUNTAMENTE DE SUA FAMÍLIA,<br>
+                CONVIDA PARA A CELEBRAÇÃO DE SUA FORMATURA
+            </div>
+
+            <div class="curso">
+                CIÊNCIA DA<br>
+                COMPUTAÇÃO
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- COLAÇÃO -->
+            <div class="evento-flex">
+                <div class="evento-data">17/01/2026 – 19H</div>
+                <div class="evento-titulo">COLAÇÃO</div>
+            </div>
+            <div class="evento-detalhes">
+                URI CAMPUS DE ERECHIM<br>
+                SALÃO DE EVENTOS PRÉDIO 5
+            </div>
+
+            <!-- JANTAR / BAILE -->
+            <div class="evento-flex">
+                <div class="evento-titulo">JANTAR / BAILE</div>
+                <div class="evento-data">17/01/2026 – 21H</div>
+            </div>
+            <div class="evento-detalhes">
+                CTG SENTINELA DA QUERÊNCIA<br>
+                R. HENRIQUE P. SALOMONI, 570 – FRINAPE – ERECHIM – RS
+            </div>
+
+            <!-- LOGO -->
+            <div class="rodape">
+                <img src="img/logoUri.png" alt="Logo URI">
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
