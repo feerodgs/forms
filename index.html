@@ -142,7 +142,7 @@
             line-height: 20px;
         }
 
-        /* CONFIRMAÇÃO + PRESENTES (NOVA VERSÃO) */
+        /* CONFIRMAÇÃO + PRESENTES */
         .confirmacao {
             margin-top: 40px;
             text-align: center;
@@ -205,98 +205,146 @@
 
 <body>
 
-<div class="paper">
+    <div class="paper">
 
-    <div class="diagonal"></div>
+        <div class="diagonal"></div>
 
-    <div class="grid">
+        <div class="grid">
 
-        <!-- FOTO -->
-        <div class="foto-wrap">
-            <img src="img/DSC05973.jpg" alt="Foto da formatura">
+            <!-- FOTO -->
+            <div class="foto-wrap">
+                <img src="img/DSC05973.jpg" alt="Foto da formatura">
+            </div>
+
+            <!-- TEXTO -->
+            <div style="flex: 1 1 320px;">
+
+                <div class="honra">COM GRANDE HONRA E ALEGRIA</div>
+
+                <div class="nome-script">Felipe Rodrigues de Almeida Julhão</div>
+
+                <div class="familia">
+                    JUNTAMENTE DE SUA FAMÍLIA,<br>
+                    CONVIDA PARA A CELEBRAÇÃO DE SUA FORMATURA
+                </div>
+
+                <div class="curso">
+                    CIÊNCIA DA<br>
+                    COMPUTAÇÃO
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- COLAÇÃO -->
+                <div class="evento-flex">
+                    <div class="evento-data">17/01/2026 – 19H</div>
+                    <div class="evento-titulo">COLAÇÃO</div>
+                </div>
+
+                <div class="evento-detalhes">
+                    URI CAMPUS DE ERECHIM<br>
+                    SALÃO DE EVENTOS PRÉDIO 5
+                </div>
+
+                <!-- JANTAR / BAILE -->
+                <div class="evento-flex">
+                    <div class="evento-titulo">JANTAR / BAILE</div>
+                    <div class="evento-data">17/01/2026 – 21H</div>
+                </div>
+
+                <div class="evento-detalhes">
+                    CTG SENTINELA DA QUERÊNCIA<br>
+                    R. HENRIQUE P. SALOMONI, 570 – FRINAPE – ERECHIM – RS
+                </div>
+
+                <!-- CONFIRMAÇÃO + PRESENTE -->
+                <div class="confirmacao">
+
+                    <div style="font-size: 16px; font-weight: 600; color: #234a84; margin-bottom: 8px;">
+                        Confirmação de Presença
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        Por gentileza, confirmar presença até <strong>10/12</strong>.
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        Caso deseje me presentear nessa data tão especial,<br>
+                        segue minha chave PIX:
+                    </div>
+
+                    <!-- CHAVE CLICÁVEL -->
+                    <div id="pix-chave" onclick="copiarPIX()" 
+                        style="
+                            font-size: 17px;
+                            font-weight: 700;
+                            color: #234A84;
+                            margin-bottom: 8px;
+                            cursor: pointer;
+                            user-select: none;
+                            transition: 0.2s;
+                        ">
+                        54999877715
+                    </div>
+
+                    <!-- BOTÃO -->
+                    <button onclick="copiarPIX()" style="
+                        padding: 6px 14px;
+                        background: #234A84;
+                        color: white;
+                        border: none;
+                        border-radius: 6px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        margin-bottom: 18px;
+                    ">
+                        Copiar chave PIX
+                    </button>
+
+                    <div id="msg-copiado" style="
+                        font-size: 13px;
+                        color: #2d6a3f;
+                        margin-top: 4px;
+                        display: none;
+                    ">
+                        Copiado!
+                    </div>
+
+                </div>
+
+                <!-- LOGO -->
+                <div class="rodape">
+                    <img src="img/logoUri.png" alt="Logo URI">
+                </div>
+
+            </div>
         </div>
 
-        <!-- TEXTO -->
-        <div style="flex: 1 1 320px;">
-
-            <div class="honra">COM GRANDE HONRA E ALEGRIA</div>
-
-            <div class="nome-script">Felipe Rodrigues de Almeida Julhão</div>
-
-            <div class="familia">
-                JUNTAMENTE DE SUA FAMÍLIA,<br>
-                CONVIDA PARA A CELEBRAÇÃO DE SUA FORMATURA
-            </div>
-
-            <div class="curso">
-                CIÊNCIA DA<br>
-                COMPUTAÇÃO
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- COLAÇÃO -->
-            <div class="evento-flex">
-                <div class="evento-data">17/01/2026 – 19H</div>
-                <div class="evento-titulo">COLAÇÃO</div>
-            </div>
-
-            <div class="evento-detalhes">
-                URI CAMPUS DE ERECHIM<br>
-                SALÃO DE EVENTOS PRÉDIO 5
-            </div>
-
-            <!-- JANTAR / BAILE -->
-            <div class="evento-flex">
-                <div class="evento-titulo">JANTAR / BAILE</div>
-                <div class="evento-data">17/01/2026 – 21H</div>
-            </div>
-
-            <div class="evento-detalhes">
-                CTG SENTINELA DA QUERÊNCIA<br>
-                R. HENRIQUE P. SALOMONI, 570 – FRINAPE – ERECHIM – RS
-            </div>
-
-            <!-- CONFIRMAÇÃO + PRESENTE (NOVO BLOCO PREMIUM) -->
-            <div class="confirmacao">
-
-                <div style="font-size: 16px; font-weight: 600; color: #234a84; margin-bottom: 8px;">
-                    Confirmação de Presença
-                </div>
-
-                <div style="margin-bottom: 25px;">
-                    Por gentileza, confirmar presença até <strong>10/12</strong>.
-                </div>
-
-                <div style="font-size: 16px; font-weight: 600; color: #234a84; margin-bottom: 8px;">
-                    Presente / PIX
-                </div>
-
-                <div style="margin-bottom: 10px;">
-                    Caso deseje me presentear nessa data tão especial,<br>
-                    segue minha chave PIX:
-                </div>
-
-                <div style="font-size: 17px; font-weight: 700; color: #234A84; margin-bottom: 15px;">
-                    54999877715
-                </div>
-
-                <div class="pix-qr">
-                    <img src="img/qrcode.jpeg" alt="QR Code PIX">
-                </div>
-
-            </div>
-
-            <!-- LOGO -->
-            <div class="rodape">
-                <img src="img/logoUri.png" alt="Logo URI">
-            </div>
-
-        </div>
     </div>
 
-</div>
-
 </body>
+
+<script>
+function copiarPIX() {
+    const chave = document.getElementById("pix-chave").textContent;
+
+    navigator.clipboard.writeText(chave).then(() => {
+
+        const msg = document.getElementById("msg-copiado");
+        const chaveBox = document.getElementById("pix-chave");
+
+        msg.style.display = "block";
+
+        chaveBox.style.color = "#1e6b32";
+        chaveBox.style.transform = "scale(1.05)";
+
+        setTimeout(() => {
+            msg.style.display = "none";
+            chaveBox.style.color = "#234A84";
+            chaveBox.style.transform = "scale(1)";
+        }, 1200);
+    });
+}
+</script>
 
 </html>
