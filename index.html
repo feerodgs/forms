@@ -274,8 +274,7 @@
                     </div>
 
                     <!-- CHAVE CLICÁVEL -->
-                    <div id="pix-chave" onclick="copiarPIX()" 
-                        style="
+                    <div id="pix-chave" onclick="copiarPIX()" style="
                             font-size: 17px;
                             font-weight: 700;
                             color: #234A84;
@@ -283,9 +282,7 @@
                             cursor: pointer;
                             user-select: none;
                             transition: 0.2s;
-                        ">
-                        54999877715
-                    </div>
+                        ">54999877715</div>
 
                     <!-- BOTÃO -->
                     <button onclick="copiarPIX()" style="
@@ -325,26 +322,26 @@
 </body>
 
 <script>
-function copiarPIX() {
-    const chave = document.getElementById("pix-chave").textContent;
+    function copiarPIX() {
+        const chave = document.getElementById("pix-chave").textContent;
 
-    navigator.clipboard.writeText(chave).then(() => {
+        navigator.clipboard.writeText(chave).then(() => {
 
-        const msg = document.getElementById("msg-copiado");
-        const chaveBox = document.getElementById("pix-chave");
+            const msg = document.getElementById("msg-copiado");
+            const chaveBox = document.getElementById("pix-chave");
 
-        msg.style.display = "block";
+            msg.style.display = "block";
 
-        chaveBox.style.color = "#1e6b32";
-        chaveBox.style.transform = "scale(1.05)";
+            chaveBox.style.color = "#1e6b32";
+            chaveBox.style.transform = "scale(1.05)";
 
-        setTimeout(() => {
-            msg.style.display = "none";
-            chaveBox.style.color = "#234A84";
-            chaveBox.style.transform = "scale(1)";
-        }, 1200);
-    });
-}
+            setTimeout(() => {
+                msg.style.display = "none";
+                chaveBox.style.color = "#234A84";
+                chaveBox.style.transform = "scale(1)";
+            }, 1200);
+        });
+    }
 </script>
 
 </html>
